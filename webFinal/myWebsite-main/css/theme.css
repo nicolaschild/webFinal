@@ -1,0 +1,372 @@
+/* Changes made:
+-Original is B&W theme, this is colored
+-Changing the menu to a bottom up design
+-Changing the images to colored
+-Adding an earthy and colorful feeling to the site
+-Changing the font family
+-Changing the background image to colored waterfalls
+-Removing my ugly mug from the naigation bar
+-Making my name rainbow themed in the Title
+-Made theme toggleable
+-Changed the CSS grid layout order for the main page
+-Changed the color of the descriptions
+*/
+
+html 
+    {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-image: url("../images/waterfalls2.gif");
+    }
+
+/* Changing the menu to be vertical */
+#headShot 
+    {
+        display: none;
+    }
+
+.menu 
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    margin-left: 6%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: none;
+    border-radius: none;
+}
+
+.Toolbar 
+{
+    background-image: none;
+    background-color: white;
+}
+
+#home 
+{
+    background-color:rgb(110, 226, 255);
+    color: white;
+    margin-bottom: 2%;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.photoHeader 
+{
+    border: none;
+    border-radius: none;
+}
+
+#aboutMe 
+{
+    background-color:rgb(110, 226, 255);
+    color: white;
+    margin-bottom: 2%;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+#projects 
+{
+    background-color:rgb(110, 226, 255);
+    color: white;
+
+}
+
+/* Changing my name to be more colorful */
+.Name
+    { 
+        background-image: linear-gradient(to left, rgb(0, 140, 255), green);
+        font-size: 5em;
+        border: 6px solid rgb(255, 255, 255);
+        border-radius: 1px;
+    }
+
+.mainPage 
+    {
+        border: none;
+
+    }
+
+.creative
+    {
+        background-color: green;
+    }
+
+
+/* Changing the color and layout of the footer */
+.Footer 
+    { 
+        background-image: linear-gradient(to left, rgb(0, 140, 255), green);
+        border: 3px solid rgb(255, 255, 255);
+    }
+
+button
+    {
+        background-color: green;
+        height: 35px;
+        color: white;
+        margin-left: 30%;
+
+    }
+
+
+/* Redoing the CSS flex layout for the top of the main page */
+
+.photoOne 
+    {
+        flex-direction: row-reverse;
+        background-color: white;
+    }
+
+.descriptions
+    {
+        margin-left: 10%;
+    }
+
+/* Now I am going to change the order of the CSS Grid on the main page */
+
+.mainPage
+    {
+        grid-template-areas:
+        "creative creative creative creative creative creative creative creative"
+        "photoThree photoThree photoThree photoThree photoThree photoThree photoThree photoThree"
+        "photoThree photoThree photoThree photoThree photoThree photoThree photoThree photoThree"
+        ". . . . . . . ."
+        "photoOne photoOne photoOne photoOne photoOne photoOne photoOne photoOne"
+        "photoOne photoOne photoOne photoOne photoOne photoOne photoOne photoOne"
+        "photoOne photoOne photoOne photoOne photoOne photoOne photoOne photoOne"
+        ". . . . . . . ."
+        "photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo"
+        "photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo"
+        "photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo"
+        "photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo"
+        "photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo photoTwo"
+        ". . . . . . . .";
+    }
+
+
+/* Tablet  */
+@media screen and (max-device-width : 1170px) 
+    {
+        body 
+        {
+            min-width: 618px;
+            max-width: 668px;
+            overflow-x: hidden;
+        }
+
+    #container 
+        {
+            max-width: 668px;
+            min-height: 1037px;
+            max-height: 1168px;
+        }
+
+    #headShot 
+        {
+            width: 0px;
+            height: 0px;
+        }
+
+    .menu 
+        {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: stretch;
+            align-content: stretch;
+            margin-left: 16%;
+            margin-bottom: 6%;
+            border: none;
+            border-radius: none;
+        }
+
+    .Toolbar 
+        {
+            border: 2px solid black;
+            border-radius: 1px;
+        }
+
+    #home 
+        {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+        }
+
+    .photoHeader 
+        {
+            border: none;
+            border-radius: none;
+        }
+
+    #aboutMe 
+        {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+        }
+
+    #projects 
+        {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;      
+        }
+
+    .photoOne 
+        {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: normal;
+            align-content: flex-start;
+            margin-top: -40px;
+        }
+
+    #firstPicture 
+        {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            margin-left: 90px;
+            margin-top: -120px;
+        }
+
+    #infoButton 
+        {
+            padding: 10px;
+            margin-left: 30%;
+        }
+
+    #hideButton
+        {
+            padding: 10px;
+            margin-left: 20px;
+        }
+
+    .descriptions 
+        {
+            padding: 15px;
+            margin-left: 45px;
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 2;
+        }
+
+    #imageExplanation 
+        {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+
+    #mainButton 
+        {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 1;
+        }
+
+    /* Video for flow */
+    .photoTwo 
+        {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: space-around;
+        }
+
+
+    #secondVideo 
+        {
+            width: 350px;
+            height: 200px;
+            margin-top: -120px;
+        }
+
+    .photoThree 
+        {
+            background-color: none;
+            border: none;
+            border-radius: none;
+            height: 0px;
+            width: 0px;
+        }
+
+    #siteInfo 
+        {
+            background-color: none;
+            font-size: 0px;
+        }
+
+    .Footer 
+        {
+            min-height: 100px;
+        }
+
+    }
+
+    .errorMsg {
+        color: red;
+    }
+    
+    input.was-validated:invalid {
+        color: red;
+        border: 1px solid red;
+    }
+    
+    input.was-validated:invalid ~ div.errorMsg {
+        display: block;
+    }
+    
+    input:valid ~ div.errorMsg, input:invalid ~ div.errorMsg {
+        display: none;
+    }
+    
+    
+    .visitorContainer {
+        font: normal 22px/1.5 sans-serif;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-image: linear-gradient(to left, rgb(0, 140, 255), green);
+        color: #fff;
+        padding: 50px 0;
+    }
+    
+    
+    .flex button {
+        background: #72d0fc;
+    }
